@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document </title>
+    <title>Home </title>
     <meta name="keywords" content=desired tag />
     <link rel="shortcut icon" href="images/favicon.png" />
     <link href="https://site-assets.fontawesome.com/releases/v6.0.0/css/all.css" rel="stylesheet">
@@ -42,23 +42,51 @@
                                     <li class="nav-item">
                                         <a class="nav-link " href="">Home</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="">What we do</a>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="Whatwedo" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">What we do</a>
+                                        <ul class="dropdown-menu" aria-labelledby="Whatwedo">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul>
                                     </li>
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link" href="" role="button" id="dropdown-toggle">
+                                        <a class="nav-link dropdown-toggle" href="#" id="CaseStudies" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
                                             Case Studies
                                         </a>
-                                        <i class="fa-solid fa-chevron-down" id="dropdown-icon"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="CaseStudies">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="blogs.html">Systems</a>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Systems
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="contactus.html">Contact</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="contactus.html">About</a>
+                                        <a class="nav-link" href="aboutus.html">About</a>
                                     </li>
                                 </ul>
                             </div>
@@ -249,7 +277,7 @@
     <!-- arange sec start -->
     <section class="arange-sec">
         <div class="container">
-            <div class="row justify-content-between">
+            <div class="row justify-content-between align-items-center">
                 <div class="col-12 col-lg-6 col-md-6">
                     <div>
                         <div class="com-heading">
@@ -285,8 +313,36 @@
                     </div>
                 </div>
                 <div class="col-12 col-lg-6 col-md-6">
-                    <div class="arrange-sec-img">
-                        <img src="./images/arrange.png" alt="">
+                    <div class="ul-stack-boxes">
+                        <ul class="boxes-ul">
+                            <li>
+                                <a href="">
+                                    <div class="box box-blue">
+                                        <i class="fa-solid fa-phone"></i>
+                                        <h3>Call us on <span>0207 205 2099</span> </h3>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="box">
+                                        <img src="./images/message1.png" alt="">
+                                        <h3>Talk to us on <span>Live Chat</span>
+                                        </h3>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="box box-blue">
+                                        <img src="./images/require.png" alt="">
+                                        <h2></h2>
+                                        <h3>Send your <span>Requirements</span>
+                                        </h3>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
