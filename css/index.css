@@ -445,14 +445,18 @@ input[type="checkbox"] {
 
 /* about us section css start */
 .com-heading h2 {
-    font-size: 58px;
+    font-size: 56px;
     text-transform: capitalize;
     font-family: 'Poppins';
     line-height: 60px;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     margin: 0 0 30px 0;
+    font-weight: 500;
 }
-
+.threecomp img {
+    width: 100%;
+    object-fit: contain;
+}
 section.aboutus-sec {
     padding: 80px 0;
 }
@@ -500,6 +504,7 @@ section.aboutus-sec {
     font-size: 32px;
     font-family: 'Poppins';
     letter-spacing: -2px;
+    font-weight: 300;
 }
 
 .arange-sec h2 span:before {
@@ -723,7 +728,9 @@ F
 section.our-solu {
     padding: 60px 0;
 }
-
+section.our-solu {
+    padding: 90px 0 20px;
+}
 /* our partners section css start */
 
 .our-partners .brands .col:hover {
@@ -757,9 +764,12 @@ section.our-partners .com-heading span:before {
     align-items: center;
     justify-content: center;
     border-radius: 6px;
+    transition: 0.5s;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-
+.brand:hover {
+    box-shadow: #043e6c 0px 3px 8px;
+}
 .our-partners img {
     width: 120px;
     height: 120px;
@@ -852,6 +862,13 @@ section.accordians-sec ul {
     align-items: center;
     gap: 12px;
 }
+section.accordians-sec {
+    padding: 80px 0 0;
+}
+section.accordians-sec .accordion-body {
+    padding: 40px 40px 80px 0px;
+}
+
 
 section.accordians-sec .accordion-button:not(.collapsed) {
     color: #000;
@@ -1097,7 +1114,7 @@ footer h6 {
 /* footer css end */
 
 
-/* ***************************About us css start */
+/* ***************************About pg us css start */
 section.banner-sec.inner_banner .banner-img {
     height: 600px;
 }
@@ -1105,7 +1122,37 @@ section.banner-sec.inner_banner .banner-img {
 section.banner-sec.inner_banner {
     height: 600px;
 }
+.abt-sec4-box {
+    position: relative;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 12px;
+    height: 780px;
+    overflow: hidden;
+}
+.abt-sec4-box .com-heading {
+    padding: 50px 40px 0;
+}
 
+
+img.abt8 {
+    position: absolute;
+    right: -72px;
+    bottom: -20px;
+    height: 440px;
+}
+section.abt-sec4 {
+    padding: 90px 0;
+}
+
+
+img.abt9 {
+    height: 440px;
+}
+.abt-sec4-box img {
+    width: 100%;
+    object-fit: cover;
+}
 .abt1 {
     width: 500px !important;
     object-fit: contain;

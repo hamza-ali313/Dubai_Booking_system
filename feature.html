@@ -22,8 +22,8 @@
 </head>
 
 <body>
-    <!-- Navbar Start -->
-    <header>
+     <!-- Navbar Start -->
+     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container d-block">
                 <div class="row align-items-center">
@@ -42,23 +42,51 @@
                                     <li class="nav-item">
                                         <a class="nav-link " href="">Home</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="">What we do</a>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="Whatwedo" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">What we do</a>
+                                        <ul class="dropdown-menu" aria-labelledby="Whatwedo">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul>
                                     </li>
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link" href="" role="button" id="dropdown-toggle">
+                                        <a class="nav-link dropdown-toggle" href="#" id="CaseStudies" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
                                             Case Studies
                                         </a>
-                                        <i class="fa-solid fa-chevron-down" id="dropdown-icon"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="CaseStudies">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="blogs.html">Systems</a>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Systems
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="contactus.html">Contact</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="contactus.html">About</a>
+                                        <a class="nav-link" href="aboutus.html">About</a>
                                     </li>
                                 </ul>
                             </div>
@@ -69,25 +97,25 @@
                                     </a>
                                 </li>
                                 <!-- <li class="">
-                                        <div class="dropdown">
-                                            <a class="phone dropdown-toggle" type="button" id="dropdownMenuButton1"
-                                                data-bs-toggle="dropdown" aria-expanded="false"
-                                                href="javascript:void()"><img src="images/phone.png" alt=""></a>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                                <h3>MDB Contacts</h3>
-                                                <li><a class="dropdown-item" href="tel:307 392 4597">
-                                                        <img src="images/icon9.png" alt="">307 392 4597</a></li>
-                                                <li><a class="dropdown-item"
-                                                        href="mailto:info@starmdbilling.cominfo@starmdbilling.com">
-                                                        <img src="images/icon8.png" alt=""> info@starmdbilling.com
-                                                    </a></li>
-                                            </ul>
-                                        </div>
-                                    </li> -->
+                                    <div class="dropdown">
+                                        <a class="phone dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                            data-bs-toggle="dropdown" aria-expanded="false"
+                                            href="javascript:void()"><img src="images/phone.png" alt=""></a>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <h3>MDB Contacts</h3>
+                                            <li><a class="dropdown-item" href="tel:307 392 4597">
+                                                    <img src="images/icon9.png" alt="">307 392 4597</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="mailto:info@starmdbilling.cominfo@starmdbilling.com">
+                                                    <img src="images/icon8.png" alt=""> info@starmdbilling.com
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                </li> -->
                                 <!-- <li class="">
-                                        <a class="req-quote theme-btn-e5a theme-btn" data-bs-toggle="modal"
-                                            data-bs-target="#exampleModal" href="javascript:void()">Request A Quote</a>
-                                    </li> -->
+                                    <a class="req-quote theme-btn-e5a theme-btn" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal" href="javascript:void()">Request A Quote</a>
+                                </li> -->
                             </ul>
                         </div>
                     </div>
@@ -96,7 +124,6 @@
         </nav>
     </header>
     <!-- Navbar End -->
-
 
     <!-- Feature pg start -->
     <section class="feature-pg">
