@@ -86,7 +86,7 @@ p {
 }
 
 .orange_btn {
-    background: #e36400;
+    position: relative;
     color: #fff;
     text-transform: capitalize;
     border-radius: 6px;
@@ -95,6 +95,36 @@ p {
     line-height: 24px;
     font-family: 'Poppins';
     text-wrap: nowrap;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    background-color: #e36400;
+}
+
+.orange_btn span {
+    position: relative;
+    z-index: 2;
+}
+
+.blue-btn span {
+    position: relative;
+    z-index: 2;
+}
+
+.orange_btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #0063b0;
+    height: 0;
+    width: 100%;
+    border-radius: 6px;
+    transition: 0.5s;
+}
+
+.orange_btn:hover:before {
+    height: 100%;
 }
 
 .blue-btn {
@@ -107,6 +137,23 @@ p {
     line-height: 24px;
     font-family: 'poppins';
     text-wrap: nowrap;
+    position: relative;
+}
+
+.blue-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #e36400;
+    height: 0;
+    width: 100%;
+    border-radius: 6px;
+    transition: 0.5s;
+}
+
+.blue-btn:hover:before {
+    height: 100%;
 }
 
 .submit-btn1 {
@@ -161,6 +208,31 @@ div#navbarNav {
     align-items: center;
 }
 
+header .nav-item {
+    padding: 0 0 0 30px;
+}
+
+header .nav-link {
+    position: relative;
+    padding: 0 !important;
+}
+
+header .nav-link:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    transition: 0.5s;
+    width: 0;
+    background: #e36400;
+
+}
+
+header .nav-link:hover:before {
+    width: 100%;
+}
+
 a.navbar-brand img {
     width: 280px;
 }
@@ -173,7 +245,7 @@ header {
     padding: 20px 0;
 }
 
-a.nav-link {
+header a.nav-item {
     padding: 0 0 0 32px !important;
 }
 
@@ -351,11 +423,12 @@ p.circle_heading {
     font-size: 15px;
     color: #fff;
     margin: 10px 0 0px 0;
+    font-weight: 400;
 }
 
 .boxes-ul h3 {
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 14px;
+    font-weight: 600;
     color: #fff;
 }
 
@@ -419,19 +492,60 @@ p {
     right: 15px;
     top: 50%;
     transform: translateY(-50%);
-    color: #999;
-    font-size: 16px;
+    color: #000;
+    font-size: 13px;
 }
 
+/* custom checkbox css start/ */
+.contact-form .checkbox-group {
+    position: relative;
+}
+.contact-form .checkbox-group input {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+}
 .contact-form .checkbox-group label {
     font-size: 14px;
     color: #333;
+    position: relative;
 }
 
+.contact-form .checkbox-group label:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid #e36400;
+    padding: 10px 10px;
+    left: -27px;
+}
+
+.contact-form .checkbox-group input:checked+label:after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: -24px;
+    width: 15px;
+    height: 15px;
+    background-color: #e36400;
+    border-radius: 50%;
+}
+
+/* custom checkbox css end/ */
+
+
+.contact-form .checkbox-group {
+    margin: 0 0 10px 0;
+}
 
 .contact-form .checkbox-group a {
-    color: #0063b0;
-    text-decoration: none;
+    color: #000;
+    text-decoration: underline;
+    font-weight: 500;
 }
 
 input[type="checkbox"] {
@@ -449,14 +563,16 @@ input[type="checkbox"] {
     text-transform: capitalize;
     font-family: 'Poppins';
     line-height: 60px;
-    letter-spacing: -1px;
+    letter-spacing: -3px;
     margin: 0 0 30px 0;
     font-weight: 500;
 }
+
 .threecomp img {
     width: 100%;
     object-fit: contain;
 }
+
 section.aboutus-sec {
     padding: 80px 0;
 }
@@ -470,7 +586,7 @@ section.aboutus-sec {
 }
 
 .boxes-ul li .box img {
-    width: 35px;
+    width: 45px;
     object-fit: contain;
     height: 35px;
 }
@@ -490,7 +606,7 @@ section.aboutus-sec {
     bottom: 7px;
     left: 0;
     height: 10px;
-    width: 310px;
+    width: 100%;
     background: #e36400;
     position: absolute;
     z-index: -1;
@@ -514,9 +630,9 @@ section.aboutus-sec {
 /* about us section css end */
 
 /* Arange Demo sec css start */
-.arange-sec h2 span:before {
+/* .arange-sec h2 span:before {
     width: 180px;
-}
+} */
 
 /* Arange Demo sec css end */
 /* choose us sec css start */
@@ -525,9 +641,17 @@ section.aboutus-sec {
     object-fit: contain;
 }
 
-section.choose-us .com-heading span:before {
-    width: 230px;
+section.choose-us .nav-link {
+    padding: 35px 0;
 }
+
+section.choose-us .nav-link.active {
+    background-color: unset !important;
+}
+
+/* section.choose-us .com-heading span:before {
+    width: 230px;
+} */
 
 .row.choos-lower .box-orange.box-orange1 {
     border-radius: 0 0 0 12px;
@@ -575,7 +699,7 @@ section.choose-us .com-heading span:before {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -40px;
+    bottom: -9px;
     background-image: url(../images/line1.png);
     height: 185px;
     width: 1px;
@@ -585,7 +709,7 @@ section.choose-us .com-heading span:before {
     content: '';
     position: absolute;
     right: 0;
-    bottom: -40px;
+    bottom: -9px;
     background-image: url(../images/line1.png);
     height: 185px;
     width: 1px;
@@ -595,7 +719,7 @@ img.shade1 {
     width: 100% ! IMPORTANT;
     position: absolute;
     left: 0;
-    bottom: -30px;
+    bottom: 0px;
 }
 
 .row.choos-lower {
@@ -615,22 +739,25 @@ img.shade1 {
 
 .row.choose-upper {
     background: #f2f2f2;
-    padding: 30px 0 30px 0;
+    /* padding: 30px 0 30px 0; */
     border-radius: 12px;
     margin: 0 0 60px;
 }
-
-
 
 /* choose us sec css end */
 
 
 /* how we work sec css start */
+
 section.how-work img {
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 8px;
     height: 230px;
+}
+
+section.how-work .container {
+    max-width: 1300px !important;
 }
 
 section.how-work p {
@@ -710,7 +837,31 @@ a.black-btn {
     font-family: 'Poppins';
     text-transform: capitalize;
     border-radius: 23px;
+    transition: 0.5s;
+    border: 1px solid transparent
 }
+
+a.green_btn:hover {
+    color: #05952a;
+    border-color: #05952a;
+}
+
+a.red-btn:hover {
+    color: #f00304;
+    border-color: #f00304;
+}
+
+a.black-btn:hover {
+    color: #000;
+    border-color: #000;
+}
+
+a.green_btn:hover,
+a.red-btn:hover,
+a.black-btn:hover {
+    background-color: #fff;
+}
+
 
 a.red-btn {
     background: #f00304;
@@ -728,18 +879,20 @@ F
 section.our-solu {
     padding: 60px 0;
 }
+
 section.our-solu {
     padding: 90px 0 20px;
 }
+
 /* our partners section css start */
 
 .our-partners .brands .col:hover {
     transform: scale(1.05);
 }
 
-section.our-partners .com-heading span:before {
+/* section.our-partners .com-heading span:before {
     width: 160px;
-}
+} */
 
 .brands-grid {
     margin: 0 0 50px 0;
@@ -767,9 +920,11 @@ section.our-partners .com-heading span:before {
     transition: 0.5s;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
 .brand:hover {
     box-shadow: #043e6c 0px 3px 8px;
 }
+
 .our-partners img {
     width: 120px;
     height: 120px;
@@ -862,9 +1017,8 @@ section.accordians-sec ul {
     align-items: center;
     gap: 12px;
 }
-section.accordians-sec {
-    padding: 80px 0 0;
-}
+
+
 section.accordians-sec .accordion-body {
     padding: 40px 40px 80px 0px;
 }
@@ -896,9 +1050,12 @@ section.accordians-sec .accordion-button {
     padding: 23px 0px;
 }
 
+
 section.accordians-sec .comp-img img {
-    width: 580px;
+    width: 570px;
+    margin: 0 0 0 50px;
 }
+
 
 /* accordian sec css end */
 
@@ -906,7 +1063,7 @@ section.accordians-sec .comp-img img {
 .social_links ul {
     display: flex;
     align-items: center;
-    gap: 2px;
+    gap: 6px;
     justify-content: center;
     position: relative;
     z-index: 2;
@@ -924,9 +1081,10 @@ section.accordians-sec .comp-img img {
 
 .social_links p {
     text-align: center;
-    font-size: 27px;
+    font-size: 18px;
     position: relative;
     z-index: 2;
+    margin-bottom: 10px;
 }
 
 .foot-cen {
@@ -939,6 +1097,13 @@ footer {
     padding: 40px 0 20px 0;
     margin: 0 30px 20px;
     border-radius: 12px;
+}
+
+img.foot_logo {
+    position: relative;
+    z-index: 2;
+    width: 290px;
+    padding: 50px 0 0 0;
 }
 
 footer h2 {
@@ -958,7 +1123,7 @@ footer h3 {
 
 .contact-links,
 .left-lower-foot {
-    padding: 0 0 0 60px;
+    padding: 0 0 0 40px;
 }
 
 footer p {
@@ -989,8 +1154,9 @@ footer .foot-links a:before {
 
 footer h5 {
     color: #fff;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
+    margin: 0 0 6px 0;
 }
 
 .social_links ul li a i {
@@ -1000,7 +1166,7 @@ footer h5 {
 footer h4 {
     color: #fff;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 footer .foot-links a:hover:before {
@@ -1061,16 +1227,18 @@ footer h6 {
 
 .contact-links ul li {
     display: flex;
-    align-items: center;
     gap: 22px;
     justify-content: flex-start;
-    margin: 0 0 20px 0;
+    margin: 40px 0 20px 0;
+    align-items: flex-start;
 }
 
 .row.foot-lower {
     margin: 40px 0 0 0;
     border-top: 1px solid #ffffff29;
     padding: 30px 0 10px 0;
+    position: relative;
+    z-index: 2;
 }
 
 .foot-links ul li {
@@ -1090,10 +1258,10 @@ footer h6 {
     z-index: 2;
 }
 
-.row.foot-lower ul li:after {
+.row.foot-lower ul li:not(:last-child):after {
     content: '';
     position: absolute;
-    right: -24px;
+    right: -23px;
     height: 22px;
     width: 1px;
     background: #ffffff40;
@@ -1106,7 +1274,7 @@ footer h6 {
     top: -40px;
     left: 0;
     background: #114873;
-    height: 480px;
+    height: 511px;
     width: 100%;
     z-index: 1;
 }
@@ -1119,9 +1287,14 @@ section.banner-sec.inner_banner .banner-img {
     height: 600px;
 }
 
+section.comp-sec {
+    padding: 80px 0 10px 0;
+}
+
 section.banner-sec.inner_banner {
     height: 600px;
 }
+
 .abt-sec4-box {
     position: relative;
     background: #fff;
@@ -1130,6 +1303,7 @@ section.banner-sec.inner_banner {
     height: 780px;
     overflow: hidden;
 }
+
 .abt-sec4-box .com-heading {
     padding: 50px 40px 0;
 }
@@ -1141,6 +1315,7 @@ img.abt8 {
     bottom: -20px;
     height: 440px;
 }
+
 section.abt-sec4 {
     padding: 90px 0;
 }
@@ -1149,10 +1324,12 @@ section.abt-sec4 {
 img.abt9 {
     height: 440px;
 }
+
 .abt-sec4-box img {
     width: 100%;
     object-fit: cover;
 }
+
 .abt1 {
     width: 500px !important;
     object-fit: contain;
@@ -1226,7 +1403,7 @@ img.hand-img {
 }
 
 img.feat-bl {
-    height: 477px;
+    height: 327px;
     object-fit: contain;
     border-radius: 12px;
     width: 100%;
@@ -1237,12 +1414,17 @@ img.feat-bl {
     padding: 30px 40px;
     color: #fff;
     border-radius: 32px;
-    margin: 80px 0;
+    margin: 50px 0;
 }
 
 .twocomputer {
     width: 100%;
     object-fit: contain;
+    margin: 30px 0 60px;
+}
+
+.fieature-first-sec .com-heading {
+    padding: 0px 0 0 20px;
 }
 
 .feature-blue p.circle_heading {
@@ -1296,6 +1478,22 @@ img.featpg1,
 
 .talk_to-sec .com-heading h2 {
     color: #000;
+}
+
+.talk_to-sec .box-anc {
+    border: 2px solid transparent;
+    padding: 4px 4px;
+    border-radius: 5px;
+    transition: 0.5s;
+    display: block;
+}
+
+.talk_to-sec .box-anc-blue:hover {
+    border-color: #0063b0;
+}
+
+.talk_to-sec .box-anc-orange:hover {
+    border-color: #e36400;
 }
 
 /* feature pg css end */
@@ -1373,6 +1571,7 @@ img.featpg1,
     display: block;
     font-weight: 600;
 }
+
 .contact-pg-form .orange_btn {
     display: inline-block;
     width: 190px;
@@ -1380,6 +1579,7 @@ img.featpg1,
     border-radius: 32px;
     padding: 18px 30px;
 }
+
 .contact-pg-form input,
 .contact-pg-form textarea {
     width: 100%;
@@ -1390,12 +1590,14 @@ img.featpg1,
     font-size: 14px;
     transition: 0.3s;
 }
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
+
 .contact-pg-form input:focus,
 .contact-pg-form textarea:focus {
     border-color: #b2b7c1;
@@ -1412,9 +1614,11 @@ input::-webkit-inner-spin-button {
     gap: 10px;
     width: 100%;
 }
+
 section.contactpg {
     padding: 70px 0;
 }
+
 .contact-pg-form .name-fields input {
     width: 48%;
 }
@@ -1427,3 +1631,150 @@ section.contactpg {
 
 /* contact us pg form css end */
 /* contact pg css end */
+
+
+
+
+
+
+
+@media only screen and (max-width: 1920px) {}
+
+@media only screen and (max-width: 1599px) {}
+
+@media only screen and (max-width: 1444px) {}
+
+@media only screen and (max-width: 1399px) {}
+
+@media only screen and (max-width: 1199px) {}
+
+@media only screen and (max-width: 991px) {}
+
+@media only screen and (max-width: 767px) {}
+
+@media only screen and (max-width: 575px) {}
+
+@media only screen and (max-width: 376px) {
+    h1 {
+        font-size: 30px;
+        line-height: 37px;
+    }
+
+    section.aboutus-sec {
+        padding: 30px 0;
+    }
+
+    .about-img-sec img {
+        width: 100%;
+    }
+
+    .boxes-ul {
+        flex-direction: column;
+    }
+
+    h3 {
+        font-size: 23px;
+
+    }
+
+    .com-heading h3 {
+        font-size: 25px;
+    }
+
+    .com-heading h2 {
+        font-size: 43px;
+        line-height: 53px;
+    }
+
+    img.banner-img {
+        width: 100%;
+        height: 610px;
+        object-fit: cover;
+    }
+
+    .arange-sec h2 {
+        font-size: 40px;
+    }
+
+    section.accordians-sec ul {
+        gap: 22px;
+        flex-direction: column;
+    }
+
+    section.accordians-sec .comp-img img {
+        margin: 30px 0 0 0px;
+        width: 100%;
+    }
+
+    .brands-grid .row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-links,
+    .left-lower-foot {
+        padding: 0 0 0 10px;
+    }
+
+    .ul-stack-boxes {
+        margin: 50px 0 0 0;
+    }
+
+    footer {
+        margin: unset;
+    }
+
+    section.how-work ul {
+        gap: 15px;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    img.foot_logo {
+        width: 250px;
+    }
+
+    section.how-work {
+        margin: 40px 0px 20px;
+    }
+
+    .multi-col {
+        flex-direction: unset !important;
+        gap: 3px !important;
+    }
+
+    section.compititor-sec .com-heading {
+        margin: 50px 0 0 0;
+    }
+
+    .abt-sec4-box img {
+        object-fit: contain;
+    }
+
+    .abt1 {
+        width: 100% !important;
+        height: 380px;
+        margin: 30px 0 0 0;
+    }
+
+    section.abt-sec2 .com-heading {
+        margin: 40px 0 0 0;
+    }
+
+    img.hand-img {
+        display: none;
+    }
+
+    section.feature-pg .com-heading {
+        margin: 20px 0 0 0;
+    }
+
+    img.featpg1,
+    .featpg2 {
+        object-fit: contain;
+        height: 380px;
+    }
+
+    img.feat-bl {
+        height: 107px;
+    }
+}
